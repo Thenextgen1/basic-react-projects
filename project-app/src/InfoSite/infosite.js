@@ -17,8 +17,6 @@ const infoSite = () => {
                         <li>React Course - </li>
                         <li>Project 1</li>
                     </ul>
-
-
                 </nav>
             </header>
             <Section />
