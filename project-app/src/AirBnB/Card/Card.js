@@ -19,7 +19,7 @@ const card = () => {
                 <h3 className='online'>ONLINE</h3>
                 <img src={Wed} alt="Wedding" />
                 <p>5.0 <span>(30)<span>.</span> USA</span></p>
-                <p>Learn wedding photo</p>
+                <p>Learn wedding photography</p>
                 <p>From $125 / person</p>
             </div>
             <div className='bike-container'>
