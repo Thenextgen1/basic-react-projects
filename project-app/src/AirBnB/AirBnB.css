@@ -1,3 +1,6 @@
 .airbnb_container {
   font-family: "Poppins", sans-serif;
 }
+.card {
+  display: inline-block;
+}
