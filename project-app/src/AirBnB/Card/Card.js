@@ -1,7 +1,16 @@
 import React from 'react'
 import './Card.css'
+import star from './Star 1.png'
 
 
+
+
+
+const style = {
+    display: 'flex',
+    alignItems: 'center'
+
+}
 //you can either put props in the card parameters, then give add the object by calling props val
 const card = (props) => {
 
@@ -11,8 +20,13 @@ const card = (props) => {
                 {
                     props.heading && < h3 > {props.heading}</h3>
                 }
+
                 <img src={props.img} alt={props.alt} />
-                <p>{props.rating} <span>({props.reviewCount})<span>.</span> {props.location}</span></p>
+                <div style={style}>
+                    <img src={star} className="star" alt="star" />
+                    <p>{props.rating} <span>({props.reviewCount})<span>.</span> {props.location}</span></p>
+                </div>
+
                 <p>{props.contents}</p>
                 <p>From {props.price} / person</p>
             </div>

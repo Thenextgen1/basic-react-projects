@@ -30,3 +30,8 @@ h3 {
 p {
   opacity: 1;
 }
+.card-container div div .star {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.5em;
+}
