@@ -11,10 +11,10 @@ const card = (props) => {
                 {
                     props.heading && < h3 > {props.heading}</h3>
                 }
-                <img src={props.img} alt="Athlete" />
-                <p>{props.rating} <span>(6)<span>.</span> USA</span></p>
-                <p>{props.content}</p>
-                <p>{props.rate}</p>
+                <img src={props.img} alt={props.alt} />
+                <p>{props.rating} <span>({props.reviewCount})<span>.</span> {props.location}</span></p>
+                <p>{props.contents}</p>
+                <p>From {props.price} / person</p>
             </div>
         </div >
     )
@@ -39,3 +39,6 @@ const card = (props) => {
 // }
 
 export default card
+
+
+

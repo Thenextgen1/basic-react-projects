@@ -3,17 +3,34 @@ import './AirBnB.css'
 import Navbar from './Navbar/Navbar'
 import Hero from './Hero/Hero'
 import Card from './Card/Card'
-import Athlete from './Card/image 12.png'
-import Wed from './Card/wedding-photography 1.png'
-import Bike from './Card/mountain-bike 1.png'
+//
+import DataSet from './data'
+
+
 
 const airBnB = () => {
+
+    const cards = DataSet.map((datum) => {
+        return (
+            <Card
+                img={datum.coverImg}
+                alt={datum.alt}
+                rating={datum.stats.rating}
+                contents={datum.title}
+                price={datum.price}
+                reviewCount={datum.stats.reviewCount}
+                location={datum.location} />
+        )
+    })
+
     return (
         <div className="airbnb_container">
             <Navbar />
             <Hero />
+
             <div className="card-container">
-                <Card
+                {cards}
+                {/* <Card
                     heading="SOLD OUT"
                     img={Athlete}
                     rating={5.0}
@@ -33,7 +50,7 @@ const airBnB = () => {
                     content="Learn wedding Photography"
                     rate="From $136 / person"
                     img={Bike}
-                />
+                /> */}
             </div>
         </div>
     )
