@@ -1,6 +1,16 @@
 .airbnb_container {
   font-family: "Poppins", sans-serif;
 }
-.card {
-  display: inline-block;
+.card-container {
+  display: flex;
+  margin: 1em;
+  margin-left: 2em;
+}
+
+@media (max-width: 540px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1em;
+  }
 }

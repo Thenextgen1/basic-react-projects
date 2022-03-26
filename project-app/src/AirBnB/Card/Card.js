@@ -15,7 +15,7 @@ const style = {
 const card = (props) => {
 
     return (
-        <div className="card-container">
+        <div className="cards">
             <div>
                 {
                     props.heading && < h3 > {props.heading}</h3>

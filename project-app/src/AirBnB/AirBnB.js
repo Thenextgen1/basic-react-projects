@@ -10,16 +10,20 @@ import DataSet from './data'
 
 const airBnB = () => {
 
+    // Used map to input the data form a datset to the card component and used props to determine where to affix the data  
+
     const cards = DataSet.map((datum) => {
         return (
             <Card
+                key={datum.id}
                 img={datum.coverImg}
                 alt={datum.alt}
                 rating={datum.stats.rating}
                 contents={datum.title}
                 price={datum.price}
                 reviewCount={datum.stats.reviewCount}
-                location={datum.location} />
+                location={datum.location}
+                heading={datum.heading} />
         )
     })
 
@@ -28,7 +32,7 @@ const airBnB = () => {
             <Navbar />
             <Hero />
 
-            <div className="card-container">
+            <div className='card-container'>
                 {cards}
                 {/* <Card
                     heading="SOLD OUT"

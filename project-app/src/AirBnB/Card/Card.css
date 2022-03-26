@@ -1,16 +1,11 @@
-.card-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 2em;
-}
-.card-container div {
+.cards div {
   margin-right: 1em;
 }
 
-.card-container img {
+.cards img {
   width: 12em;
   height: 15em;
+  border-radius: 9px;
 }
 h3 {
   font-size: 0.7em;
@@ -30,8 +25,14 @@ h3 {
 p {
   opacity: 1;
 }
-.card-container div div .star {
+.cards div div .star {
   width: 15px;
   height: 15px;
   margin-right: 0.5em;
+}
+
+@media (max-width: 425px) {
+  .cards {
+    flex-direction: column;
+  }
 }

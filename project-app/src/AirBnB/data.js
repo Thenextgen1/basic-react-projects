@@ -16,6 +16,7 @@ const dataSet = [{
     alt: "Athlete",
     location: "Online",
     openSpots: 0,
+    heading: 'SOLD OUT'
 },
 {
     id: 2,
@@ -30,6 +31,7 @@ const dataSet = [{
     },
     location: "Online",
     openSpots: 27,
+    heading: 'SOLD OUT'
 },
 {
     id: 3,
@@ -44,6 +46,7 @@ const dataSet = [{
     },
     location: "Norway",
     openSpots: 3,
+    heading: 'OPEN'
 }
 ]
 

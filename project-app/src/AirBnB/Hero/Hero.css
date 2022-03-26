@@ -5,7 +5,7 @@
   margin: 6em 1em 1em 2em;
 }
 .hero-logo {
-  max-width: 50%;
+  max-width: 100%;
   align-self: center;
 }
 h1 {
@@ -15,4 +15,18 @@ p {
   font-size: 1em;
   font-weight: 300;
   opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 6em 1em 2em 1em;
+    display: block;
+  }
+  p {
+    width: 100%;
+  }
+  .hero-logo {
+    max-width: 100%;
+    width: auto;
+  }
 }
