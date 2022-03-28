@@ -1,0 +1,47 @@
+.tourist-image {
+  width: 175px;
+  height: 238px;
+  border-radius: 5px;
+}
+.marker {
+  width: 9px;
+  height: 11.55px;
+  margin-right: 0.5em;
+}
+a {
+  color: rgba(145, 142, 155, 1);
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+
+.country {
+  letter-spacing: 2.5px;
+}
+
+.date {
+  font-weight: 700;
+  font-size: 0.8em;
+}
+h2 {
+  margin: 0;
+}
+
+.image-container {
+  margin-right: 1.5em;
+}
+.details {
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .details {
+    width: 100%;
+  }
+  a {
+    margin-left: 10px;
+    font-size: 0.6em;
+  }
+  .country {
+    font-size: 0.6em;
+  }
+}
