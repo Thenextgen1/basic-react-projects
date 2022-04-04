@@ -1,6 +1,6 @@
-import pyramid from './Cards/pyramids.jpg'
-import fishRiver from './Cards/fishRiver.jpg'
-import tableMountain from './Cards/tableMountain.jpg'
+import pyramid from './Card/pyramids.jpg'
+import fishRiver from './Card/fishRiver.jpg'
+import tableMountain from './Card/tableMountain.jpg'
 
 const dataSet = [
     {
