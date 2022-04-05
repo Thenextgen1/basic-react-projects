@@ -33,14 +33,18 @@ fieldset {
 
 }
 
+.memeimg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .meme-image {
     margin-top: 2em;
     max-width: 100%;
-    position: relative;
-    width: 100%;
-
-
+    width: 30em;
+    height: 20em;
 }
 
 @media(max-width: 767px) {
@@ -49,6 +53,11 @@ fieldset {
     }
 }
 
+@media(max-width: 650px) {
+    /* .meme-image {
+        left: 0;
+    } */
+}
 
 
 @media(max-width: 576px) {

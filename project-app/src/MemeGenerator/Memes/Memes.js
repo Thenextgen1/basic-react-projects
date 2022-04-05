@@ -69,8 +69,10 @@ const Memes = () => {
 
             </form>
             <StyledButton onClick={getMemeImage}>Get a new meme image 🤨</StyledButton>
-            <img src={memeImage} alt="Meme" className='meme-image' />
 
+            <div className='memeimg-container'>
+                <img src={memeImage} alt="Meme" className='meme-image' />
+            </div>
             {/* <h1 onClick={changeName}>{Name}</h1> */}
 
         </Styledsection>)
