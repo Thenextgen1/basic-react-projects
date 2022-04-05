@@ -1,9 +1,9 @@
-
-form fieldset{
+form fieldset {
     display: flex;
     margin: 0;
     border: none;
 }
+
 input[type=text] {
     color: rgba(13, 13, 13, 1);
     font-weight: 500;
@@ -13,10 +13,10 @@ input[type=text] {
     padding: 10px;
     outline: none;
     width: 25em;
-margin-right: 1em;
-border-radius: 5px;
-border: 1px solid rgba(213, 212, 216, 1);
-text-indent: 5px;
+    margin-right: 1em;
+    border-radius: 5px;
+    border: 1px solid rgba(213, 212, 216, 1);
+    text-indent: 5px;
 }
 
 fieldset {
@@ -30,9 +30,18 @@ fieldset {
     padding-block-end: 0;
     display: flex;
     justify-content: center;
-    
+
 }
 
+
+.meme-image {
+    margin-top: 2em;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+
+
+}
 
 @media(max-width: 767px) {
     input[type=text] {
@@ -45,14 +54,15 @@ fieldset {
 @media(max-width: 576px) {
     form fieldset {
         flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        justify-content: center;
+        align-items: center;
     }
+
     input[type=text] {
         width: auto;
         padding: 5px;
         margin-top: 1em;
 
-        
+
     }
 }

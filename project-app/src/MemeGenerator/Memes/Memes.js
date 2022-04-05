@@ -12,6 +12,7 @@ width: 100%;
 font-family: 'Karla', sans-serif;
 
 
+
 @media(max-width: 576px) {
     margin: 3em 1em 3em 0.4em;
 }
@@ -37,26 +38,28 @@ margin-left: 1em;
 `
 
 
-const getMemeImage = () => {
-    console.log(useState)
-
-    const memesArray = MemesData.data.memes
-
-    const random = Math.floor(Math.random() * memesArray.length);
-    const randomUrl = memesArray[random]
-
-    console.log(randomUrl.url)
-}
-
-
-
-
 
 
 
 
 const Memes = () => {
+
+    const [memeImage, setmemeImage] = useState("")
+    const getMemeImage = () => {
+
+        const memesArray = MemesData.data.memes
+        const random = Math.floor(Math.random() * memesArray.length);
+        setmemeImage(memesArray[random].url)
+
+    }
+    // const [Name, setName] = useState("Sammy")
+    // const changeName = () => {
+    //     setName("Ohimai")
+    // }
+
+
     return (
+
         <Styledsection>
             <form className="form">
                 <fieldset>
@@ -66,6 +69,10 @@ const Memes = () => {
 
             </form>
             <StyledButton onClick={getMemeImage}>Get a new meme image 🤨</StyledButton>
+            <img src={memeImage} alt="Meme" className='meme-image' />
+
+            {/* <h1 onClick={changeName}>{Name}</h1> */}
+
         </Styledsection>)
 }
 
