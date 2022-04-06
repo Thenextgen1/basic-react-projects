@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Memes.css'
 import styled from 'styled-components'
 import MemesData from '../MemesData'
-
+// import Practise from './practise'
 
 const Styledsection = styled.section`
 margin: 2em;
@@ -44,19 +44,29 @@ margin-left: 1em;
 
 const Memes = () => {
 
-    const [memeImage, setmemeImage] = useState("")
+
+    const [meme, setMeme] = useState({
+        topText: '',
+        bottomText: '',
+        randomImage: "https://i.imgflip.com/30b1gx.jpg"
+    })
+
+    // const [allMemeImages, setAllMemeImages] = useState(MemesData)
+
+    // const [memeImage, setmemeImage] = useState("https://i.imgflip.com/30b1gx.jpg")
     const getMemeImage = () => {
 
         const memesArray = MemesData.data.memes
         const random = Math.floor(Math.random() * memesArray.length);
-        setmemeImage(memesArray[random].url)
+        const url = memesArray[random].url
+        setMeme(prevMeme => {
+            return {
+                ...prevMeme,
+                randomImage: url
+            }
+        })
 
     }
-    // const [Name, setName] = useState("Sammy")
-    // const changeName = () => {
-    //     setName("Ohimai")
-    // }
-
 
     return (
 
@@ -71,8 +81,9 @@ const Memes = () => {
             <StyledButton onClick={getMemeImage}>Get a new meme image 🤨</StyledButton>
 
             <div className='memeimg-container'>
-                <img src={memeImage} alt="Meme" className='meme-image' />
+                <img src={meme.randomImage} alt="Meme" className='meme-image' />
             </div>
+            {/* <Practise /> */}
             {/* <h1 onClick={changeName}>{Name}</h1> */}
 
         </Styledsection>)

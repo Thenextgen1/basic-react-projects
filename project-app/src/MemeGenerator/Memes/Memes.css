@@ -53,12 +53,6 @@ fieldset {
     }
 }
 
-@media(max-width: 650px) {
-    /* .meme-image {
-        left: 0;
-    } */
-}
-
 
 @media(max-width: 576px) {
     form fieldset {
