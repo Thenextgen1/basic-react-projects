@@ -37,23 +37,39 @@ position: relative;
 margin-left: 1em;
 `
 
-
-
-
-
-
 const Memes = () => {
+
+    //names in  state must be same as that of input name
+
+
+    const [formData, setFormData] = useState({
+        topText: "",
+        bottomText: ""
+    })
+
+
+    function handleChange(event) {
+        const { name, value } = event.target;
+        setFormData(prevFormData => {
+            return {
+                ...prevFormData,
+                [name]: value
+            }
+        })
+
+
+    }
+
+    // handleChange();
 
 
     const [meme, setMeme] = useState({
-        topText: '',
-        bottomText: '',
+        topText: "",
+        bottomText: "",
         randomImage: "https://i.imgflip.com/30b1gx.jpg"
     })
 
-    // const [allMemeImages, setAllMemeImages] = useState(MemesData)
 
-    // const [memeImage, setmemeImage] = useState("https://i.imgflip.com/30b1gx.jpg")
     const getMemeImage = () => {
 
         const memesArray = MemesData.data.memes
@@ -66,6 +82,10 @@ const Memes = () => {
             }
         })
 
+
+
+
+
     }
 
     return (
@@ -73,8 +93,20 @@ const Memes = () => {
         <Styledsection>
             <form className="form">
                 <fieldset>
-                    <input type="text" placeholder="Top text" />
-                    <input type="text" placeholder='Bottom Text' />
+                    <input
+                        type="text"
+                        placeholder="Top text"
+                        onChange={handleChange}
+                        name="topText"
+                        value={formData.topText}
+                    />
+                    <input
+                        type="text"
+                        placeholder='Bottom Text'
+                        onChange={handleChange}
+                        name='bottomText'
+                        value={formData.bottomText}
+                    />
                 </fieldset>
 
             </form>
@@ -82,10 +114,9 @@ const Memes = () => {
 
             <div className='memeimg-container'>
                 <img src={meme.randomImage} alt="Meme" className='meme-image' />
+                <h1 className='meme-text top-text'>{formData.topText}</h1>
+                <h1 className='meme-text bottom-text'>{formData.bottomText}</h1>
             </div>
-            {/* <Practise /> */}
-            {/* <h1 onClick={changeName}>{Name}</h1> */}
-
         </Styledsection>)
 }
 
